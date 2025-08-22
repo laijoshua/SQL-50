@@ -66,254 +66,255 @@ My answers to Leetcode's SQL 50
 7. [Find Users With Valid Emails](#Find-Users-With-Valid-Emails)
 
 
-##Recyclable-&-Low-Fat-Products
+## Recyclable-&-Low-Fat-Products
 ```sql
 SELECT product_id
 FROM Products
 WHERE low_fats = "Y" AND recyclable = "Y"
 ```
 
-##Find-Customer-Referee
+## Find-Customer-Referee
 ```sql
 
 ```
 
-##Big-Countries
+## Big-Countries
 ```sql
 
 ```
 
-##Article-Views-I
+## Article-Views-I
 ```sql
 
 ```
 
-##Invalid-Tweets
+## Invalid-Tweets
 ```sql
 
 ```
 
-##Replace-Employee-ID-with-the-Unique-Identifier
+## Replace-Employee-ID-with-the-Unique-Identifier
 ```sql
 
 ```
 
-##Product-Sales-Analysis-I
+## Product-Sales-Analysis-I
 ```sql
 
 ```
 
-##Customer-who-visited-but-did-not-make-any-transactions
+## Customer-who-visited-but-did-not-make-any-transactions
 ```sql
 
 ```
 
-##Rising-Temperature
+## Rising-Temperature
 ```sql
 
 ```
 
-##Average-Time-of-Process-per-Machine
+## Average-Time-of-Process-per-Machine
 ```sql
 
 ```
 
-##Employee-Bonus
+## Employee-Bonus
 ```sql
 
 ```
 
-##Students-&-Examinations
+## Students-&-Examinations
 ```sql
 
 ```
 
-##Managers-with-at-least-5-Direct-Reports
+## Managers-with-at-least-5-Direct-Reports
 ```sql
 
 ```
 
-##Confirmation-Rate
+## Confirmation-Rate
 ```sql
 
 ```
 
-##Not-Boring-Movies
+## Not-Boring-Movies
 ```sql
 
 ```
 
-##Average-Selling-Price
+## Average-Selling-Price
 ```sql
 
 ```
 
-##Project-Employees-I
+## Project-Employees-I
 ```sql
 
 ```
 
-##Percentage-of-Users-Attended-a-Contest
+## Percentage-of-Users-Attended-a-Contest
 ```sql
 
 ```
 
-##Queries-Quality-&-Percentage
+## Queries-Quality-&-Percentage
 ```sql
 
 ```
 
-##Monthly-Transactions-I
+## Monthly-Transactions-I
 ```sql
 
 ```
 
-##Immediate-Food-Delivery-II
+## Immediate-Food-Delivery-II
 ```sql
 
 ```
 
-##Game-Play-Analysis-IV
+## Game-Play-Analysis-IV
 ```sql
 
 ```
 
-##Number-of-Unique-Subjects-Taught-by-Each-Teacher
+## Number-of-Unique-Subjects-Taught-by-Each-Teacher
 ```sql
 
 ```
 
-##User-Activity-for-the-Past-30-Days-I
+## User-Activity-for-the-Past-30-Days-I
 ```sql
 
 ```
 
-##Product-Sales-Analysis-III
+## Product-Sales-Analysis-III
 ```sql
 
 ```
 
-##Classes-With-at-least-5-Students
+## Classes-With-at-least-5-Students
 ```sql
 
 ```
 
-##Find-Followers-Count
+## Find-Followers-Count
 ```sql
 
 ```
 
-##Biggest-Single-Number
+## Biggest-Single-Number
 ```sql
 
 ```
 
-##Customers-Who-Bought-All-Products
+## Customers-Who-Bought-All-Products
 ```sql
 
 ```
 
-##The-Number-of-Employees-Which-Report-to-Each-Employee
+## The-Number-of-Employees-Which-Report-to-Each-Employee
 ```sql
 
 ```
 
-##Primary-Department-for-Each-Employee
+## Primary-Department-for-Each-Employee
 ```sql
 
 ```
 
-##Triangle-Judgement
+## Triangle-Judgement
 ```sql
 
 ```
 
-##Consecutive-Numbers
+## Consecutive-Numbers
 ```sql
 
 ```
 
-##Product-Price-at-a-Given-Date
+## Product-Price-at-a-Given-Date
 ```sql
 
 ```
 
-##Last-Person-to-Fit-in-the-Bus
+## Last-Person-to-Fit-in-the-Bus
 ```sql
 
 ```
 
-##Count-Salary-Categories
+## Count-Salary-Categories
 ```sql
 
 ```
 
-##Employees-Whose-Manager-Left-the-Company
+## Employees-Whose-Manager-Left-the-Company
 ```sql
 
 ```
 
-##Exchange-Seats
+## Exchange-Seats
 ```sql
 
 ```
 
-##Movie-Rating
+## Movie-Rating
 ```sql
 
 ```
 
-##Restaurant-Growth
+## Restaurant-Growth
 ```sql
 
 ```
 
-##Friend-Requests-II-Who-has-the-most-friends
+## Friend-Requests-II-Who-has-the-most-friends
 ```sql
 
 ```
 
-##Investments-in-2016
+## Investments-in-2016
 ```sql
 
 ```
 
-##Department-Top-Three-Salaries
+## Department-Top-Three-Salaries
 ```sql
 
 ```
 
-##Fix-Names-in-a-Table
+## Fix-Names-in-a-Table
 ```sql
 
 ```
 
-##Patients-With-a-Condition
+## Patients-With-a-Condition
 ```sql
 
 ```
 
-##Delete-Duplicate-Emails
+## Delete-Duplicate-Emails
 ```sql
 
 ```
 
-##Second-Highest-Salary
+## Second-Highest-Salary
 ```sql
 
 ```
 
-##Group-Sold-Products-By-The-Date
+## Group-Sold-Products-By-The-Date
 ```sql
 
 ```
 
-##List-the-Products-Ordered-in-a-Period
+## List-the-Products-Ordered-in-a-Period
 ```sql
 
 ```
 
-##Find-Users-With-Valid-Emails
+## Find-Users-With-Valid-Emails
 ```sql
 
 ```
+
