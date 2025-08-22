@@ -2,7 +2,7 @@
 My answers to Leetcode's SQL 50 
 
 ## Select:
-1. [Recyclable & Low Fat Products](#Recyclable-&-Low-Fat-Products)
+1. [Recyclable & Low Fat Products](#Recyclable-and-Low-Fat-Products)
 2. [Find Customer Referee](#Find-Customer-Referee)
 3. [Big Countries](#Big-Countries)
 4. [Article Views I](#Article-Views-I)
@@ -15,7 +15,7 @@ My answers to Leetcode's SQL 50
 4. [Rising Temperature](#Rising-Temperature)
 5. [Average Time of Process per Machine](#Average-Time-of-Process-per-Machine)
 6. [Employee Bonus](#Employee-Bonus)
-7. [Students & Examinations](#Students-&-Examinations)
+7. [Students & Examinations](#Students-and-Examinations)
 8. [Managers with at least 5 Direct Reports](#Managers-with-at-least-5-Direct-Reports)
 9. [Confirmation Rate](#Confirmation-Rate)
 
@@ -24,7 +24,7 @@ My answers to Leetcode's SQL 50
 2. [Average Selling Price](#Average-Selling-Price)
 3. [Project Employees I](#Project-Employees-I)
 4. [Percentage of Users Attended a Contest](#Percentage-of-Users-Attended-a-Contest)
-5. [Queries Quality & Percentage](#Queries-Quality-&-Percentage)
+5. [Queries Quality & Percentage](#Queries-Quality-and-Percentage)
 6. [Monthly Transactions I](#Monthly-Transactions-I)
 7. [Immediate Food Delivery II](#Immediate-Food-Delivery-II)
 8. [Game Play Analysis IV](#Game-Play-Analysis-IV)
@@ -66,7 +66,7 @@ My answers to Leetcode's SQL 50
 7. [Find Users With Valid Emails](#Find-Users-With-Valid-Emails)
 
 
-## Recyclable & Low Fat Products
+## Recyclable and Low Fat Products
 ```sql
 SELECT product_id
 FROM Products
@@ -123,7 +123,7 @@ WHERE low_fats = "Y" AND recyclable = "Y"
 
 ```
 
-## Students & Examinations
+## Students and Examinations
 ```sql
 
 ```
@@ -158,7 +158,7 @@ WHERE low_fats = "Y" AND recyclable = "Y"
 
 ```
 
-## Queries Quality & Percentage
+## Queries Quality and Percentage
 ```sql
 
 ```
