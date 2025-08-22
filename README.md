@@ -52,7 +52,7 @@ My answers to Leetcode's SQL 50
 2. [Exchange Seats](#Exchange-Seats)
 3. [Movie Rating](#Movie-Rating)
 4. [Restaurant Growth](#Restaurant-Growth)
-5. [Friend Requests II: Who has the most friends](#Friend-Requests-II:-Who-has-the-most-friends)
+5. [Friend Requests II: Who has the most friends](#Friend-Requests-II-Who-has-the-most-friends)
 6. [Investments in 2016](#Investments-in-2016)
 7. [Department Top Three Salaries](#Department-Top-Three-Salaries)
 
@@ -268,7 +268,7 @@ WHERE low_fats = "Y" AND recyclable = "Y"
 
 ```
 
-##Friend-Requests-II:-Who-has-the-most-friends
+##Friend-Requests-II-Who-has-the-most-friends
 ```sql
 
 ```
