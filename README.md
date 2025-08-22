@@ -75,62 +75,91 @@ WHERE low_fats = "Y" AND recyclable = "Y"
 
 ## Find Customer Referee
 ```sql
-
+SELECT name
+FROM Customer
+WHERE referee_id IS NULL OR referee_id != 2
 ```
 
 ## Big Countries
 ```sql
-
+SELECT name, population, area
+FROM World
+WHERE area >= 3000000 or population >= 25000000
 ```
 
 ## Article Views I
 ```sql
-
+SELECT DISTINCT author_id AS id
+FROM Views
+WHERE author_id = viewer_id
+ORDER BY author_id ASC
 ```
 
 ## Invalid Tweets
 ```sql
-
+SELECT tweet_id
+FROM Tweets
+WHERE LENGTH(content) > 15
 ```
 
 ## Replace Employee ID with the Unique Identifier
 ```sql
-
+SELECT unique_id, name
+FROM Employees LEFT JOIN EmployeeUNI ON Employees.id = EmployeeUNI.id
 ```
 
 ## Product Sales Analysis I
 ```sql
-
+SELECT product_name, year, price
+FROM Sales JOIN Product ON Sales.product_id = Product.product_id
 ```
 
 ## Customer who visited but did not make any transactions
 ```sql
-
+SELECT customer_id, COUNT(visit_id) AS count_no_trans
+FROM Visits
+WHERE visit_id NOT IN (SELECT visit_id FROM Transactions)
+GROUP BY customer_id
 ```
 
 ## Rising Temperature
 ```sql
-
+SELECT a.id
+FROM Weather a, Weather b
+WHERE a.temperature > b.temperature AND dateDiff(a.recordDate, b.recordDate)=1
 ```
 
 ## Average Time of Process per Machine
 ```sql
-
+SELECT b.machine_id, ROUND(AVG(b.timestamp-a.timestamp),3) AS processing_time
+FROM Activity a
+JOIN Activity b ON a.machine_id = b.machine_id
+WHERE a.activity_type = "start" AND b.activity_type = "end"
+GROUP BY machine_id
 ```
 
 ## Employee Bonus
 ```sql
-
+SELECT name, bonus
+FROM Employee LEFT JOIN Bonus ON Employee.empId = Bonus.empId
+WHERE bonus < 1000 OR bonus IS NULL
 ```
 
 ## Students and Examinations
 ```sql
-
+SELECT s.student_id, student_name, su.subject_name, COUNT(e.subject_name) AS attended_exams
+FROM Students s
+    JOIN Subjects su 
+    LEFT JOIN Examinations e ON s.student_id = e.student_id AND su.subject_name = e.subject_name
+GROUP BY s.student_id, student_name, su.subject_name
+ORDER BY s.student_id, student_name, su.subject_name
 ```
 
 ## Managers with at least 5 Direct Reports
 ```sql
-
+SELECT name
+FROM Employee
+WHERE id IN (SELECT managerId FROM Employee GROUP BY managerId HAVING COUNT(*) >= 5)
 ```
 
 ## Confirmation Rate
@@ -140,7 +169,10 @@ WHERE low_fats = "Y" AND recyclable = "Y"
 
 ## Not Boring Movies
 ```sql
-
+SELECT id, movie, description, rating
+FROM Cinema
+WHERE description <> "boring" AND id % 2 = 1
+ORDER BY rating DESC
 ```
 
 ## Average Selling Price
@@ -150,17 +182,27 @@ WHERE low_fats = "Y" AND recyclable = "Y"
 
 ## Project Employees I
 ```sql
-
+SELECT project_id, ROUND(SUM(experience_years)/COUNT(DISTINCT Project.employee_id), 2) AS average_years
+FROM Project JOIN Employee on Project.employee_id = Employee.employee_id
+GROUP BY project_id
 ```
 
 ## Percentage of Users Attended a Contest
 ```sql
-
+SELECT contest_id, ROUND(COUNT(DISTINCT user_id)/(SELECT COUNT(DISTINCT user_id) FROM Users) * 100, 2)AS percentage
+FROM Register
+GROUP BY contest_id
+ORDER BY percentage DESC, contest_id ASC
 ```
 
 ## Queries Quality and Percentage
 ```sql
-
+SELECT 
+    query_name, 
+    ROUND(AVG(rating/position), 2) AS quality, 
+    ROUND((SELECT COUNT(rating) FROM Queries b WHERE rating < 3 AND a.query_name = b.query_name)*100/COUNT(query_name), 2)AS poor_query_percentage
+FROM Queries a
+GROUP BY query_name
 ```
 
 ## Monthly Transactions I
@@ -180,37 +222,55 @@ WHERE low_fats = "Y" AND recyclable = "Y"
 
 ## Number of Unique Subjects Taught by Each Teacher
 ```sql
-
+SELECT teacher_id, COUNT(DISTINCT subject_id) AS cnt 
+FROM Teacher
+GROUP BY teacher_id
 ```
 
 ## User Activity for the Past 30 Days I
 ```sql
-
+SELECT activity_date AS day, COUNT(DISTINCT user_id) AS active_users
+FROM Activity
+WHERE activity_date BETWEEN '2019-06-28' AND '2019-07-27'
+GROUP BY day
 ```
 
 ## Product Sales Analysis III
 ```sql
-
+SELECT product_id, year AS first_year, quantity, price
+FROM Sales
+WHERE (product_id, year) IN (SELECT product_id, min(year) FROM Sales GROUP BY product_id)
 ```
 
 ## Classes With at least 5 Students
 ```sql
-
+SELECT class 
+FROM Courses
+GROUP BY class
+HAVING COUNT(DISTINCT student) >= 5
 ```
 
 ## Find Followers Count
 ```sql
-
+SELECT user_id, COUNT(follower_id) AS followers_count
+FROM Followers
+GROUP BY user_id
+ORDER BY user_id
 ```
 
 ## Biggest Single Number
 ```sql
-
+SELECT MAX(num) AS num
+FROM MyNumbers
+WHERE num in (SELECT num FROM MyNumbers GROUP BY num HAVING COUNT(num) = 1)
 ```
 
 ## Customers Who Bought All Products
 ```sql
-
+SELECT customer_id
+FROM Customer
+GROUP BY customer_id
+HAVING COUNT(DISTINCT product_key) = (SELECT COUNT(product_key) FROM Product)
 ```
 
 ## The Number of Employees Which Report to Each Employee
@@ -220,7 +280,9 @@ WHERE low_fats = "Y" AND recyclable = "Y"
 
 ## Primary Department for Each Employee
 ```sql
-
+SELECT employee_id, department_id
+FROM Employee
+WHERE primary_flag = 'Y' OR employee_id IN (SELECT employee_id FROM Employee GROUP BY employee_id HAVING COUNT(employee_id) = 1)
 ```
 
 ## Triangle Judgement
